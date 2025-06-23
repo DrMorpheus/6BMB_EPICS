@@ -1,2 +1,2 @@
 # 6BMB_EPICS
-adl controls for 6-BM-B
+adl controls and other EPICS files for 6-BM-B
