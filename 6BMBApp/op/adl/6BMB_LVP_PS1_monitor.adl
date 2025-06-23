@@ -1,0 +1,337 @@
+
+file {
+	name="/home/sam85/support/6BMB/6BMBApp/op/adl/6BMB_LVP_PS1_monitor.adl"
+	version=030117
+}
+display {
+	object {
+		x=65
+		y=231
+		width=446
+		height=243
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=1
+	snapToGrid=1
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=8
+		y=15
+		width=400
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Monitor PS1 Controls"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=4
+		y=65
+		width=190
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Heater Power"
+}
+"text update" {
+	object {
+		x=140
+		y=65
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)LVP_furnace_calcs.D"
+		clr=0
+		bclr=22
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=340
+		y=115
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)LVP_tc2_calcs.I"
+		clr=0
+		bclr=22
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=5
+		y=115
+		width=190
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temperature, Tc1, Tc2"
+}
+"text update" {
+	object {
+		x=220
+		y=115
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)LVP_tc1_calcs.I"
+		clr=0
+		bclr=22
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=5
+		y=140
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual Volts & Amps"
+}
+"text update" {
+	object {
+		x=220
+		y=140
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)DMM1Ch5_raw"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=340
+		y=140
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)DMM1Ch6_calc.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=5
+		y=170
+		width=190
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Control Volts (calc'd)"
+}
+"text update" {
+	object {
+		x=220
+		y=170
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)FurnaceVoltage"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=340
+		y=170
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)FurnaceCurrent"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=340
+		y=200
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)DMM1Ch4_calc.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=220
+		y=200
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)DMM1Ch3_calc.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=5
+		y=200
+		width=175
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	"dynamic attribute" {
+		chan="$(P)$DMM1Ch7_calc.VAL"
+	}
+	textix="Control Volts (read)"
+}
+text {
+	object {
+		x=250
+		y=65
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Hutch Temp."
+}
+"text update" {
+	object {
+		x=345
+		y=65
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)DMM1Ch10_calc.VAL"
+		clr=0
+		bclr=22
+	}
+	align="horiz. right"
+	limits {
+	}
+}

@@ -1,0 +1,572 @@
+
+file {
+	name="p:\epics\support\X17B2\X17B2App\op\adl\X17B2_Heater_2.adl"
+	version=020306
+}
+display {
+	object {
+		x=173
+		y=272
+		width=400
+		height=600
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+composite {
+	object {
+		x=6
+		y=97
+		width=264
+		height=67
+	}
+	"composite name"=""
+	children {
+		"text entry" {
+			object {
+				x=88
+				y=97
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CV).VAL"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=38
+				y=100
+				width=45
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Value"
+		}
+		valuator {
+			object {
+				x=38
+				y=118
+				width=200
+				height=25
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CV).VAL"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"message button" {
+			object {
+				x=6
+				y=119
+				width=27
+				height=24
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CV)_tweak.A"
+				clr=14
+				bclr=51
+			}
+			label="<"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=243
+				y=119
+				width=27
+				height=24
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CV)_tweak.B"
+				clr=14
+				bclr=51
+			}
+			label=">"
+			press_msg="1"
+		}
+		"text entry" {
+			object {
+				x=88
+				y=144
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CV)_tweakVal"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=38
+				y=147
+				width=45
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Tweak"
+		}
+	}
+}
+composite {
+	object {
+		x=6
+		y=243
+		width=264
+		height=67
+	}
+	"composite name"=""
+	children {
+		"text entry" {
+			object {
+				x=88
+				y=243
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CA).VAL"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=38
+				y=246
+				width=45
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Value"
+		}
+		valuator {
+			object {
+				x=38
+				y=264
+				width=200
+				height=25
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CA).VAL"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"message button" {
+			object {
+				x=6
+				y=265
+				width=27
+				height=24
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CA)_tweak.A"
+				clr=14
+				bclr=51
+			}
+			label="<"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=243
+				y=265
+				width=27
+				height=24
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CA)_tweak.B"
+				clr=14
+				bclr=51
+			}
+			label=">"
+			press_msg="1"
+		}
+		"text entry" {
+			object {
+				x=88
+				y=290
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)DAC$(D)_$(CA)_tweakVal"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=38
+				y=293
+				width=45
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Tweak"
+		}
+	}
+}
+"text update" {
+	object {
+		x=289
+		y=99
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(AV).VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=289
+		y=260
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(AA).VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+bar {
+	object {
+		x=50
+		y=176
+		width=300
+		height=23
+	}
+	monitor {
+		chan="$(P)$(AV).VAL"
+		clr=20
+		bclr=55
+	}
+	limits {
+	}
+}
+bar {
+	object {
+		x=50
+		y=326
+		width=300
+		height=23
+	}
+	monitor {
+		chan="$(P)$(AA).VAL"
+		clr=20
+		bclr=55
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=75
+		y=10
+		width=1
+		height=36
+	}
+	"basic attribute" {
+		clr=14
+	}
+}
+text {
+	object {
+		x=50
+		y=18
+		width=300
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Heater Power Supply #$(PS)"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=125
+		y=63
+		width=150
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Voltage (Volts)"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=107
+		y=209
+		width=187
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Current (Amperes)"
+}
+text {
+	object {
+		x=117
+		y=369
+		width=166
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temperature (C)"
+}
+text {
+	object {
+		x=177
+		y=409
+		width=45
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Tc 1"
+}
+text {
+	object {
+		x=291
+		y=409
+		width=45
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Tc 2"
+}
+"text update" {
+	object {
+		x=149
+		y=463
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Fluke1_Calc.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=149
+		y=499
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Fluke1_Convert.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=263
+		y=463
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Fluke2_Calc.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=263
+		y=499
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Fluke2_Convert.VAL"
+		clr=14
+		bclr=55
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=11
+		y=460
+		width=128
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temperature"
+}
+text {
+	object {
+		x=11
+		y=496
+		width=128
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="EMF (mV)"
+}
+text {
+	object {
+		x=50
+		y=40
+		width=312
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="40 Volt 60 Ampere"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=126
+		y=77
+		width=150
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="      Desired                  Actual"
+	align="horiz. centered"
+}

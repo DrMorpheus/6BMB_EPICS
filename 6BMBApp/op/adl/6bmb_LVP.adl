@@ -1,0 +1,414 @@
+
+file {
+	name="N:\adl\6bmb_LVP.adl"
+	version=030102
+}
+display {
+	object {
+		x=432
+		y=312
+		width=351
+		height=265
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=240
+		y=1
+		width=110
+		height=12
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="updated 9/29/2011"
+	align="horiz. right"
+}
+text {
+	object {
+		x=75
+		y=81
+		width=176
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Experiment Information"
+}
+"related display" {
+	object {
+		x=11
+		y=81
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Experiment Information"
+		name="experiment_info.adl"
+		args="P=6BMB_LVP:"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=104
+		width=24
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="MCA"
+}
+"related display" {
+	object {
+		x=11
+		y=104
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Multi-element detector"
+		name="12element_dxp.adl"
+		args="P=6BMBXMAP:, M=mca, D=dxp"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=127
+		width=48
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Experiment Control"
+}
+"related display" {
+	object {
+		x=11
+		y=127
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Experimental Motor Controls"
+		name="8motors.adl"
+		args="P=6BMA_LVP:, TITLE=Experimental_Motor_Controls, M1=pm1, M2=pm2, M3=pm16, M4=pm13, M5=pm8, M6=pm10, M7=m6, M8=m7"
+	}
+	display[1] {
+		label="Cam Slits"
+		name="8motors.adl"
+		args="P=6BMA_LVP:, Title=Cam_Slits, M1=m9, M2=m10, M3=m11, M4=m12, M5=pm8, M6=pm9, M7=pm10, M8=pm11"
+	}
+	display[2] {
+		label="Camera Controls"
+		name="3motors.adl"
+		args="P=6BMA_LVP:, TITLE=Camera_Motors, M1=m25, M2=m26, M3=m27"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=150
+		width=32
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Scan"
+}
+"related display" {
+	object {
+		x=11
+		y=150
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Scan 1"
+		name="scan_more.adl"
+		args="P=6BMA_LVP:, S=scan1, N=1"
+	}
+	display[1] {
+		label="Scan 2"
+		name="scan_more.adl"
+		args="P=6BMA_LVP:, S=scan2, N=2"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=173
+		width=48
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Heater"
+}
+"related display" {
+	object {
+		x=11
+		y=173
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Monitor Temp, Pressure & LVDTs"
+		name="X17B2_Pressure.adl"
+		args="P=6BMA_LVP:, LVDT1=DMM1Ch18_calc, LVDT2=DMM2Ch8_calc, OilP=LVP_furnace_calcs.H"
+	}
+	display[1] {
+		label="Power supply #1 15V 220A"
+		name="X17B2_Heater_1.adl"
+		args="P=6BMA_LVP:,D=1,CV=1,CA=3,AV=LVP_furnace_calcs.A,AA=LVP_furnace_calcs.B,PS=1"
+	}
+	display[2] {
+		label="LVP furnace #1"
+		name="X17B2_LVP_furnace_1.adl"
+		args="P=6BMA_LVP:,OUT=DAC1_3,VOLT=DAC1_1,PID=LVP:PID1"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=219
+		width=240
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Keithley"
+}
+"related display" {
+	object {
+		x=11
+		y=219
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Keithley"
+		name="X17B2_keithley2kDMM_mf.adl"
+		args="P=6BMA_LVP:, Dmm=DMM1"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=196
+		width=120
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="Pressure, LVDTs"
+}
+"related display" {
+	object {
+		x=11
+		y=196
+		width=59
+		height=18
+	}
+	display[0] {
+		label="Monitor Temp, Pressure & LVDTs"
+		name="X17B2_Pressure.adl"
+		args="P=6BMA_LVP:, LVDT1=DMM1Ch18_calc, LVDT2=DMM1Ch8_calc, OilP=DMM1Ch9_calc"
+	}
+	display[1] {
+		label="Pressure control"
+		name="X17B2_pressure_control.adl"
+		args="P=6BMA_LVP:, R=Press_, D=1, C=8"
+	}
+	display[2] {
+		label="D-DIA control"
+		name="X17B2_DDIA.adl"
+		args="P=6BMA_LVP:, M1=m29, M2=m30, TITLE=D-DIA control"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=75
+		y=242
+		width=80
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+		width=2
+	}
+	textix="IOC status"
+}
+"related display" {
+	object {
+		x=10
+		y=242
+		width=59
+		height=18
+	}
+	display[0] {
+		label="vxStats"
+		name="IOC_Status_full.adl"
+		args="P=6BMA_LVP:"
+	}
+	display[1] {
+		label="Save/restore status"
+		name="save_restoreStatus_more.adl"
+		args="P=6BMA_LVP:"
+	}
+	clr=14
+	bclr=4
+}
+rectangle {
+	object {
+		x=38
+		y=15
+		width=249
+		height=56
+	}
+	"basic attribute" {
+		clr=50
+	}
+}
+composite {
+	object {
+		x=51
+		y=25
+		width=221
+		height=38
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=51
+				y=25
+				width=221
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="6BM 250 Ton Press"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=51
+				y=47
+				width=221
+				height=16
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="User Control"
+			align="horiz. centered"
+		}
+	}
+}
